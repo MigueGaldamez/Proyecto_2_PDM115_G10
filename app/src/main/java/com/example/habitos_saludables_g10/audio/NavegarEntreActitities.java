@@ -10,6 +10,7 @@ import com.example.habitos_saludables_g10.HabitoInsertarActivity;
 import com.example.habitos_saludables_g10.MenuPrincipalActivity;
 
 public class NavegarEntreActitities extends Activity {
+    //Fucion
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
