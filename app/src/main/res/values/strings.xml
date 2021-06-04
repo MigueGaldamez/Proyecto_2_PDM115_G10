@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Habitos_Saludables_G10</string>
+    <string name="facebook_app_id">519401649489505</string>
+    <string name="fb_login_protocol_scheme">fb519401649489505</string>
+    <string name="title_activity_menu_principal">MenuPrincipalActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="bienvenido">Bienvenido aqui los habitos que desea fomentar</string>
+    <string name="Estadisticas">Estadisticas</string>
+    <string name="Habitos">Habitos</string>
+    <string name="Exportar">Exportar</string>
+    <string name="AgregarHabito">Agregar Habito</string>
+    <string name="insertarHabito">Crear nuevo habito</string>
+    <string name="idHabito">Identificador</string>
+    <string name="nombre">Nombre:</string>
+    <string name="Objetivo">Objetivo</string>
+    <string name="opciones">Opciones:</string>
+    <string name="insertar">Registrar</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="horario">Establecer horario:</string>
+    <string name="Lunes">Lunes</string>
+    <string name="Martes">Martes</string>
+    <string name="Miercoles">Miercoles</string>
+    <string name="Jueves">Jueves</string>
+    <string name="Viernes">Viernes</string>
+    <string name="Sabado">Sabado</string>
+    <string name="Domingo">Domingo</string>
+    <string name="hora">Hora:</string>
+    <string name="fechaCreacion">Fecha creacion:</string>
+    <string name="ExportarPdf">Exportar PDF</string>
+    <string name="Bienvenida">Bienvenido</string>
+    <string name="grupo">App para fomentar habitos saludables</string>
+    <string name="grupo10">PDM115 - G10</string>
+    <string name="establecerhora">Establecer hora:</string>
+    <string name="EjerciciosPara">Ejercicios Recomendados para la buena salud</string>
+    <string name="Video1">Como quemar grasa</string>
+    <string name="videos">Consultar los Mejores videos</string>
+    <string name="Excuchar">Escuchar Indicaciones Extra</string>
+    <string name="Video2">Aumentar la habilidad fisica</string>
+    <string name="audios">Escuchar audios relajantes</string>
+    <string name="btnplay">Reproducir</string>
+    <string name="btnstop">Pausar</string>
+    <string name="audiosA">Audios para mejorar su concentracion y aliviar el estres</string>
+    <string name="naturaleza1">Sonidos de la naturaleza para aliviar el estres.</string>
+    <string name="naturaleza2">Fluir del agua para canalizar nuestras molestias.</string>
+    <string name="naturaleza3">Sonidos para meditar y practicar yoga.</string>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFffd56b</color>
+    <color name="purple_500">#FFffb26b</color>
+    <color name="purple_700">#FFff7b54</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="boton_fondo">#FF000000</color>
+    <color name="boton_texto">#FFFFFFFF</color>
+
+    <color name="boton_azul">#FFdeedf0</color>
+
+    <color name="boton_excel">#FF4ca1a3</color>
+    <color name="boton_pdf">#FFf55c47</color>
+</resources>

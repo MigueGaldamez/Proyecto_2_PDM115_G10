@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bienvenido"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <ListView
+        android:id="@+id/listHabitos"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:text="@string/AgregarHabito"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="irInsertarHabito"
+        android:layout_marginTop="10dp" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="0.5"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_marginRight="5dp"
+                android:text="@string/Exportar"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:id="@+id/excel"
+                android:backgroundTint="@color/boton_excel"/>
+
+
+            <Button
+                android:layout_marginLeft="5dp"
+                android:text="@string/ExportarPdf"
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.5"
+                android:id="@+id/pdf"
+                android:backgroundTint="@color/boton_pdf"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <Button
+        android:text="@string/videos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/videosVer"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:text="@string/audios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/audiosVer"
+        android:layout_marginTop="10dp" />
+
+
+</LinearLayout>

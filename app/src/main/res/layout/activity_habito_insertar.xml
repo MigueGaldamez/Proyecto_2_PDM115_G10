@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="1"
+    android:orientation="vertical"
+    android:padding="30dp"
+   >
+
+        <TextView
+            android:id="@+id/Encabezado"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:text="@string/insertarHabito"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/idHabito"/>
+            <EditText
+                android:id="@+id/editIdHabito"
+                android:inputType="text"
+                android:maxLength="6" />
+        </TableRow>
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/nombre" />
+            <EditText
+                android:id="@+id/editNombre"
+                android:inputType="text"
+                android:maxLength="20" />
+        </TableRow>
+        <TableRow android:gravity="center">
+
+            <TextView android:text="@string/Objetivo" />
+            <EditText
+                android:id="@+id/editObjetivo"
+                android:inputType="text"
+                android:maxLength="100" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="@string/horario" />
+        </TableRow>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <Switch android:id="@+id/idLun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Lunes"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <Switch android:id="@+id/idMar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Martes"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+            <Switch android:id="@+id/idMie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Miercoles"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+            <Switch android:id="@+id/idJue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Jueves"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <Switch android:id="@+id/idVie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Viernes"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+            <Switch android:id="@+id/idSab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Sabado"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+            <Switch android:id="@+id/idDom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Domingo"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </LinearLayout>
+    </LinearLayout>
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/hora" />
+
+            <Button
+
+                android:text="@string/establecerhora"
+                android:layout_margin="6dp"
+                android:backgroundTint="@color/boton_fondo"
+                android:textColor="@color/boton_texto"/>
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/hora" />
+            <EditText
+                android:id="@+id/editHora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="@string/opciones" />
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <Button
+                android:onClick="insertarHabito"
+                android:text="@string/insertar"
+                android:layout_margin="6dp"
+                android:backgroundTint="@color/boton_fondo"
+                android:textColor="@color/boton_texto"/>
+
+            <Button
+                android:layout_width="120dp"
+                android:onClick="limpiarTexto"
+                android:text="@string/limpiar"
+                android:layout_margin="6dp"
+                android:backgroundTint="@color/boton_fondo"
+                android:textColor="@color/boton_texto"/>
+        </TableRow>
+</TableLayout>
