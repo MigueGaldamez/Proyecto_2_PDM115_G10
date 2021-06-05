@@ -17,10 +17,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -160,6 +162,19 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         videos = findViewById(R.id.videosVer);
         audios = findViewById(R.id.audiosVer);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Habito habito = (Habito)parent.getAdapter().getItem(position);
+                String idHabito = habito.getIdHabito();
+                Intent intent =new Intent(MenuPrincipalActivity.this,RegistrarActividadActivity.class);
+                intent.putExtra("idHabito",idHabito);
+                startActivity(intent);
+
+                
+            }
+        });
+
         audios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -272,7 +287,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
             helper.cerrar();
             if(!estado)
             {
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 String date = sdf.format(new Date());
                 helper.abrir();
                 Usuario usuario = new Usuario();
@@ -419,12 +434,41 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
 
             TextView fecha = (TextView) convertView.findViewById(R.id.fecha);
             TextView objetivo = (TextView) convertView.findViewById(R.id.objetivo);
+            Switch lun = convertView.findViewById(R.id.idLun);
+            Switch mar = convertView.findViewById(R.id.idMar);
+            Switch mie = convertView.findViewById(R.id.idMie);
+            Switch jue = convertView.findViewById(R.id.idJue);
+            Switch vie = convertView.findViewById(R.id.idVie);
+            Switch sab = convertView.findViewById(R.id.idSab);
+            Switch dom = convertView.findViewById(R.id.idDom);
+            helper.abrir();
+            Horario horario = helper.consultarHorario(habito.getIdHabito());
+            helper.cerrar();
+            if(horario.getLun().equals("0"))
+            { lun.setChecked(false);}else if(horario.getLun().equals("1")){lun.setChecked(true);}
 
+            if(horario.getMar().equals("0"))
+            { mar.setChecked(false);}else if(horario.getMar().equals("1")){mar.setChecked(true);}
+
+            if(horario.getMie().equals("0"))
+            { mie.setChecked(false);}else if(horario.getMie().equals("1")){mie.setChecked(true);}
+
+            if(horario.getJue().equals("0"))
+            { jue.setChecked(false);}else if(horario.getJue().equals("1")){jue.setChecked(true);}
+
+            if(horario.getVie().equals("0"))
+            { vie.setChecked(false);}else if(horario.getVie().equals("1")){vie.setChecked(true);}
+
+            if(horario.getSab().equals("0"))
+            { sab.setChecked(false);}else if(horario.getSab().equals("1")){sab.setChecked(true);}
+
+            if(horario.getDom().equals("0"))
+            { dom.setChecked(false);}else if(horario.getDom().equals("1")){dom.setChecked(true);}
             // Populate the data into the template view using the data object
             codigo.setText(habito.getIdHabito());
             nombres.setText(habito.getNomHabito());
             fecha.setText(habito.getFechaCreacion());
-            objetivo.setText(habito.getIdUsuario());
+            objetivo.setText(habito.getObjetivo());
             return convertView;
         }
     }
@@ -488,8 +532,6 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         List<Habito> listaHabitos = helper.getHabitoList(ids);
         Usuario usuario= helper.consultarUsuario(ids);
         helper.cerrar();
-
-
 
         String pdfPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString();
         File file = new File(pdfPath,"mypdf.pdf");
@@ -600,7 +642,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
 
                     String nomHabito = listaHabitos.get(i).getNomHabito();
                     String datoFiltro;
-                   datoFiltro = Normalizer.normalize(nomHabito, Normalizer.Form.NFD);
+                    datoFiltro = Normalizer.normalize(nomHabito, Normalizer.Form.NFD);
                     datoFiltro = datoFiltro.replace(" ","").replaceAll("[\\p{InCombiningDiacriticalMarks}]", "").toLowerCase();
                     if (datoFiltro.equals(subCadena2.replace(" ",""))){
                         newList.add(listaHabitos.get(i));

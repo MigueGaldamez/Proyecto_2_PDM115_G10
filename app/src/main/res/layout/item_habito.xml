@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_margin="20dp"
     android:padding="10dp"
-    android:background="@drawable/borde_items">
+    android:background="@drawable/borde_items"
+    android:descendantFocusability="blocksDescendants">
     <LinearLayout
         android:layout_marginTop="5dp"
         android:orientation="horizontal"

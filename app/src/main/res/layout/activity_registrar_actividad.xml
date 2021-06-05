@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarActividadActivity"
+    android:stretchColumns="1"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/idhabitoR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/RegistrarR"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <TableRow android:gravity="center" android:layout_marginTop="20dp">
+        <TextView android:text="@string/idHabito"/>
+        <EditText
+            android:id="@+id/idhabitoR2"
+            android:inputType="text"
+            android:maxLength="20"
+            android:enabled="false"/>
+
+    </TableRow>
+    <TableRow android:gravity="center">
+        <TextView android:text="@string/fechaCreacion" />
+        <EditText
+            android:id="@+id/editfechaR"
+            android:inputType="text"
+            android:maxLength="20"
+            android:enabled="false"/>
+    </TableRow>
+    <TableRow android:gravity="center">
+        <TextView android:text="@string/Comentario"/>
+        <EditText
+            android:id="@+id/editComentarioR"
+            android:inputType="text"
+            android:maxLength="200" />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button
+            android:onClick="insertarRegistro"
+            android:text="@string/insertar"
+            android:layout_margin="6dp"
+            android:backgroundTint="@color/boton_fondo"
+            android:textColor="@color/boton_texto"/>
+
+        <Button
+            android:layout_width="120dp"
+            android:onClick="limpiarTextoR"
+            android:text="@string/limpiar"
+            android:layout_margin="6dp"
+            android:backgroundTint="@color/boton_fondo"
+            android:textColor="@color/boton_texto"/>
+    </TableRow>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Registros"
+        android:textSize="20dp"
+        android:textColor="@color/black" />
+    <ListView
+        android:id="@+id/listRegistros"
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+</TableLayout>

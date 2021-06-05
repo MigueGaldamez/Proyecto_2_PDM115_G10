@@ -150,12 +150,22 @@
             <TextView android:text="@string/hora" />
 
             <Button
-
+                android:id="@+id/botonHora"
                 android:text="@string/establecerhora"
                 android:layout_margin="6dp"
                 android:backgroundTint="@color/boton_fondo"
                 android:textColor="@color/boton_texto"/>
         </TableRow>
+        <TableRow android:gravity="center">
+            <TextView android:text="@string/estableceralarma" />
+            <CheckBox
+                android:id="@+id/alarmaSi"
+                android:text="@string/estableceralarma"
+                android:layout_margin="6dp"
+                android:backgroundTint="@color/boton_fondo"
+                android:textColor="@color/boton_texto"/>
+        </TableRow>
+
         <TableRow>
             <TextView android:text="@string/hora" />
             <EditText
@@ -163,6 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:enabled="false"
                 android:inputType="time" />
         </TableRow>
         <TableRow>
@@ -185,4 +196,7 @@
                 android:backgroundTint="@color/boton_fondo"
                 android:textColor="@color/boton_texto"/>
         </TableRow>
+
+
+
 </TableLayout>

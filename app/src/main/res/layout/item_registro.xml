@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    android:padding="10dp"
+    android:background="@drawable/borde_items"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <TextView
+                android:id="@+id/textcodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/idHabito"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/codigoRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/idHabito" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+            <TextView
+                android:id="@+id/textComentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Comentario"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/comentario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Comentario" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp">
+
+
+            <TextView
+                android:id="@+id/textfecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fechaCreacion"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fechaCreacion" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
