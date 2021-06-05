@@ -48,6 +48,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.Color;
@@ -161,6 +162,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         exportarPDF = findViewById(R.id.pdf);
         videos = findViewById(R.id.videosVer);
         audios = findViewById(R.id.audiosVer);
+        FirebaseMessaging.getInstance().subscribeToTopic("Notificacion1");
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

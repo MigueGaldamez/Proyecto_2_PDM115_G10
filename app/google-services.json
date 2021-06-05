@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "413140821661",
+    "project_id": "proyectopdm-1622575692024",
+    "storage_bucket": "proyectopdm-1622575692024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413140821661:android:ede426f4cf7c3245c55674",
+        "android_client_info": {
+          "package_name": "com.example.habitos_saludables_g10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413140821661-fi65sekp2qoddhf72urv78ff88gn5g0l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.habitos_saludables_g10",
+            "certificate_hash": "3ad5f9f58b81df3265ea35d9de8f645870f769c5"
+          }
+        },
+        {
+          "client_id": "413140821661-cniu23fkq1sr7hjues9ng34il1bu83fv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMPaSKh0U98oWmKXwYZPhxumX0zClNnT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413140821661-cniu23fkq1sr7hjues9ng34il1bu83fv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
