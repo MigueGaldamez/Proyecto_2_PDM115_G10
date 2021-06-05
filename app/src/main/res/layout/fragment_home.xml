@@ -20,7 +20,7 @@
     <ListView
         android:id="@+id/listHabitos"
         android:layout_width="match_parent"
-        android:layout_height="274dp"
+        android:layout_height="186dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp" />
 
@@ -81,6 +81,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/audiosVer"
         android:layout_marginTop="10dp" />
+    <Button
+        android:text="Mostrar Calendario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendario"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Donde Estoy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gps"
+        android:layout_marginTop="10dp" />
+
 
 
 </LinearLayout>

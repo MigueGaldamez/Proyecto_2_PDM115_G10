@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Latitud" >
+    </TextView>
+    <EditText
+        android:id="@+id/edtLatitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:width="1dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Longitud" >
+    </TextView>
+    <EditText
+        android:id="@+id/edtlongitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:width="1dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Altitud" >
+    </TextView>
+    <EditText
+        android:id="@+id/edtAltitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:width="1dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Direccion" >
+    </TextView>
+    <EditText
+        android:id="@+id/edtDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    android:enabled="false"
+    android:width="1dp" />
+    <Button
+        android:id="@+id/btnObtenerDatosPos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btnObtenerDatos" />
+</LinearLayout>

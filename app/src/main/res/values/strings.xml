@@ -53,4 +53,7 @@
     <string name="naturaleza2">Fluir del agua para canalizar nuestras molestias.</string>
     <string name="naturaleza3">Sonidos para meditar y practicar yoga.</string>
 
+    <string name="calendario">Calendario</string>
+    <string name="btnObtenerDatos">Obtener lugar especifico </string>
+
 </resources>
