@@ -51,7 +51,7 @@ public class ControlBD {
                 db.execSQL("CREATE TABLE usuario(idUsuario VARCHAR(400) NOT NULL PRIMARY KEY,nomUsuario VARCHAR(100),fechaUnion VARCHAR(40),correo VARCHAR(300),urlImagen VARCHAR(600));");
                 db.execSQL("CREATE TABLE habito(idHabito VARCHAR(6) NOT NULL PRIMARY KEY,nomHabito VARCHAR(30),fechaCreacion VARCHAR(40),objetivo VARCHAR(50),idUsuario VARCHAR(400));");
                 db.execSQL("CREATE TABLE horario(idHorario VARCHAR(6) NOT NULL PRIMARY KEY,lun VARCHAR(1),mar VARCHAR(1),mie VARCHAR(1), jue VARCHAR(1), vie VARCHAR(1), sab VARCHAR(1), dom VARCHAR(1), hora VARCHAR(40), idHabito VARCCHAR(6) );");
-                db.execSQL("CREATE TABLE diaRealizado(idDia VARCHAR(6) NOT NULL PRIMARY KEY,idHabito VARCHAR(6), idUsuario VARCHAR(400), fecha VARCHAR(40), cometario VARCHAR(100));");
+                db.execSQL("CREATE TABLE diaRealizado(idDia VARCHAR(6) NOT NULL PRIMARY KEY,idHabito VARCHAR(6), idUsuario VARCHAR(400), fecha VARCHAR(40), comentario VARCHAR(100));");
                 db.execSQL("CREATE TABLE sesion(idSesion VARCHAR(6) NOT NULL PRIMARY KEY, idUsuario VARCHAR(400))");
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -147,6 +147,25 @@ public class ControlBD {
         }
         return regInsertados;
     }
+    public String insertar(Registro registro) {
+        //p private String idDia,idHabito,idUsuario,fecha,comentario;
+        String regInsertados = "Registro Insertado Nº= ";
+        long contador = 0;
+        ContentValues sesi = new ContentValues();
+        sesi.put("idDia", registro.getIdDia());
+        sesi.put("idHabito", registro.getIdHabito());
+        sesi.put("idUsuario", registro.getIdUsuario());
+        sesi.put("fecha", registro.getFecha());
+        sesi.put("comentario", registro.getComentario());
+
+        contador = db.insert("diaRealizado", null, sesi);
+        if (contador == -1 || contador == 0) {
+            regInsertados = "Error solo se permite un registro por dia.";
+        } else {
+            regInsertados = regInsertados + contador;
+        }
+        return regInsertados;
+    }
     public String eliminar(Sesion sesion) {
         String regAfectados = "filas afectadas= ";
         int contador = 0;
@@ -175,6 +194,42 @@ public class ControlBD {
             sesion.setIdUsuario(cursor.getString(1));
             sesion.setIdSesion(cursor.getString(0));
             return sesion;
+        } else {
+            return null;
+        }
+    }
+    public Habito consultarHabito(String id) {
+        String[] idSesion = {id};
+        Cursor cursor = db.query("habito", camposHabito, "idHabito = ?", idSesion, null, null, null);
+        if (cursor.moveToFirst()) {
+            Habito habito = new Habito();
+            habito.setIdHabito(cursor.getString(0));
+            habito.setNomHabito(cursor.getString(1));
+            habito.setFechaCreacion(cursor.getString(2));
+            habito.setObjetivo(cursor.getString(3));
+            habito.setIdUsuario(cursor.getString(4));
+
+            return habito;
+        } else {
+            return null;
+        }
+    }
+    public Horario consultarHorario(String id) {
+        String[] idSesion = {id};
+        Cursor cursor = db.query("horario", camposHorario, "idHabito = ?", idSesion, null, null, null);
+        if (cursor.moveToFirst()) {
+            Horario horario = new Horario();
+            horario.setIdHorario(cursor.getString(0));
+            horario.setLun(cursor.getString(1));
+            horario.setMar(cursor.getString(2));
+            horario.setMie(cursor.getString(3));
+            horario.setJue(cursor.getString(4));
+            horario.setVie(cursor.getString(5));
+            horario.setSab(cursor.getString(6));
+            horario.setDom(cursor.getString(7));
+            horario.setHora(cursor.getString(8));
+            horario.setIdHabito(cursor.getString(9));
+            return horario;
         } else {
             return null;
         }
@@ -227,5 +282,28 @@ public class ControlBD {
         }
 
         return listaHabito;
+    }
+    public List<Registro> getRegistroList(String id){
+
+        //String sql = " SELECT * FROM habito";
+        String[] idFacultad = {id};
+        Cursor cursor = db.query("diaRealizado", camposDiasRealizado, "idHabito = ?", idFacultad, null, null, null);
+
+        List<Registro> listaRegistro = new ArrayList<Registro>();
+        //Cursor cursor = db.rawQuery(sql,null);
+        if (cursor.moveToFirst()){
+// private String idDia,idHabito,idUsuario,fecha,comentario;
+            do {
+                String idDia = cursor.getString(0);
+                String idHabito = cursor.getString(1);
+                String idUsuario = cursor.getString(2);
+                String fecha = cursor.getString(3);
+                String comentario = cursor.getString(4);
+
+                listaRegistro.add(new Registro(idDia,idHabito,idUsuario,fecha,comentario));
+            }while (cursor.moveToNext());
+        }
+
+        return listaRegistro;
     }
 }

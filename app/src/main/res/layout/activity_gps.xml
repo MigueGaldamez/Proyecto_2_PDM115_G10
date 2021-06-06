@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Latitud" >
+        android:text="@string/txtLatitud" >
     </TextView>
     <EditText
         android:id="@+id/edtLatitud"
@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Longitud" >
+        android:text="@string/txtLongitud" >
     </TextView>
     <EditText
         android:id="@+id/edtlongitud"
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Altitud" >
+        android:text="@string/txtAltitud" >
     </TextView>
     <EditText
         android:id="@+id/edtAltitud"
@@ -39,7 +39,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Direccion" >
+        android:text="@string/txtDireccion" >
     </TextView>
     <EditText
         android:id="@+id/edtDireccion"

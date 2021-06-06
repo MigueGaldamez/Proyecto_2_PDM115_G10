@@ -8,6 +8,8 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+
 
     <application
         android:allowBackup="true"
@@ -20,14 +22,15 @@
         <activity android:name=".AudioActivity"></activity>
         <activity android:name=".GPSActivity"></activity>
         <activity android:name=".CalendarioActivity"></activity>
+        <activity android:name=".RegistrarActividadActivity"></activity>
         <activity android:name=".videoActivity" />
         <activity android:name=".HabitoInsertarActivity" />
         <activity
             android:name=".MenuPrincipalActivity"
             android:label="@string/title_activity_menu_principal"
             android:theme="@style/Theme.Habitos_Saludables_G10.NoActionBar" />
-        <activity android:name=".MenuActivity" />
         <activity android:name=".LoginActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

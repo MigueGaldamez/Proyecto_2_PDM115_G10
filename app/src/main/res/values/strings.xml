@@ -52,8 +52,15 @@
     <string name="naturaleza1">Sonidos de la naturaleza para aliviar el estres.</string>
     <string name="naturaleza2">Fluir del agua para canalizar nuestras molestias.</string>
     <string name="naturaleza3">Sonidos para meditar y practicar yoga.</string>
-
-    <string name="calendario">Calendario</string>
-    <string name="btnObtenerDatos">Obtener lugar especifico </string>
+    <string name="RegistrarR">Registrar Actividad</string>
+    <string name="Comentario">Comentario</string>
+    <string name="Registros">Registros en la base:</string>
+    <string name="estableceralarma">Crear alarma</string>
+    <string name="txtAltitud">Altitud </string>
+    <string name="txtLatitud">Latitud </string>
+    <string name="txtLongitud">Longitud </string>
+    <string name="txtDireccion">Direccion </string>
+    <string name="btnObtenerDatos">Obtener Datos Posicion </string>
+    <string name="AbrirCalendario">Abrir Calendario </string>
 
 </resources>
