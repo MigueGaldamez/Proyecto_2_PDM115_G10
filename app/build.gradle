@@ -51,9 +51,16 @@ dependencies {
     implementation files('libs/mail.jar')
     implementation files('libs/activation.jar')
     implementation files('libs/additionnal.jar')
+    implementation 'androidx.room:room-runtime:2.3.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
 
+
+
+    implementation 'com.github.j4velin.colorpicker:colorpicker:1.20.6'
+    implementation 'com.github.j4velin.EazeGraph:EazeGraph:1.0.3'
+    implementation 'com.google.android.apps.dashclock:dashclock-api:2.0.0'
 
 }

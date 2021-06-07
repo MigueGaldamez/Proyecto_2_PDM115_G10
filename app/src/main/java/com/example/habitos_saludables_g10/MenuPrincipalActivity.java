@@ -27,6 +27,7 @@ import android.widget.VideoView;
 
 import com.example.habitos_saludables_g10.audio.AudioControl;
 import com.example.habitos_saludables_g10.audio.NavegarEntreActitities;
+import com.example.habitos_saludables_g10.ui.Activity_Main;
 import com.example.habitos_saludables_g10.ui.gallery.GalleryFragment;
 import com.example.habitos_saludables_g10.ui.gallery.GalleryViewModel;
 import com.example.habitos_saludables_g10.ui.home.HomeFragment;
@@ -347,6 +348,10 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         if (selected == R.id.action_audio){
             onClick(item.getActionView());
         }
+        if (selected == R.id.action_podometro){
+            Intent intent=new Intent(MenuPrincipalActivity.this, Activity_Main.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -372,7 +377,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
                 || super.onSupportNavigateUp();
     }
     public void irInsertarHabito(View v){
-        Intent intent=new Intent(MenuPrincipalActivity.this, HabitoInsertarActivity.class);
+       Intent intent=new Intent(MenuPrincipalActivity.this, HabitoInsertarActivity.class);
         startActivity(intent);
     }
 

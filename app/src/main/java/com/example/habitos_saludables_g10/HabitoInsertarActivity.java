@@ -117,7 +117,7 @@ public class HabitoInsertarActivity extends AudioControl {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.filtro_voz, menu);
+        getMenuInflater().inflate(R.menu.incertar_habito, menu);
         return true;
     }
 
