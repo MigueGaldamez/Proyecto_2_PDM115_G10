@@ -116,7 +116,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
     private AppBarConfiguration mAppBarConfiguration;
     private ImageView imagen_perfil;
     private TextView nombre,id,email;
-    private Button salirbtn,exportar,exportarPDF,videos,audios;
+    private Button salirbtn,exportar,exportarPDF,videos,audios, gps;
     private GoogleApiClient googleApiClient;
     private GoogleSignInOptions gso;
     private String idsesion;
@@ -162,6 +162,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         exportarPDF = findViewById(R.id.pdf);
         videos = findViewById(R.id.videosVer);
         audios = findViewById(R.id.audiosVer);
+        gps = findViewById(R.id.gpsVer);
      //   FirebaseMessaging.getInstance().subscribeToTopic("Notificacion1");
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -181,6 +182,13 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MenuPrincipalActivity.this,AudioActivity.class);
+                startActivity(intent);
+            }
+        });
+        gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MenuPrincipalActivity.this,GPSActivity.class);
                 startActivity(intent);
             }
         });
@@ -480,6 +488,8 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         listaHabitos = helper.getHabitoList(ids);
         helper.cerrar();
 
+
+
         if(listaHabitos.size() > 0){
 
             adapter= new HabitoAdapter(this, listaHabitos);
@@ -487,6 +497,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
             ListView listView = (ListView) findViewById(R.id.listHabitos);
 
             listView.setAdapter(adapter);
+
 
         }
         else{

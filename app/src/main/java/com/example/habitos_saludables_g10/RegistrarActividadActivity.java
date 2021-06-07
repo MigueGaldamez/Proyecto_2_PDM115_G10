@@ -15,7 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -28,6 +30,7 @@ public class RegistrarActividadActivity extends AppCompatActivity {
     Habito habito;
     RegistroAdapter adapter;
     List<Registro> listaRegistro;
+    List<Registro> miLista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,13 +56,20 @@ public class RegistrarActividadActivity extends AppCompatActivity {
         llenarListaRegistro(idHabito);
         calendario = findViewById(R.id.calendarioVer);
 
+
         calendario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                helper.abrir();
+                miLista = helper.getRegistroList(idHabito);
+                helper.cerrar();
+
                 Intent intent=new Intent(RegistrarActividadActivity.this,CalendarioActivity.class);
+                intent.putExtra("miLista", (Serializable) miLista);
                 startActivity(intent);
             }
         });
+
 
     }
     public void insertarRegistro(View v) {
@@ -115,6 +125,7 @@ public class RegistrarActividadActivity extends AppCompatActivity {
         listaRegistro = helper.getRegistroList(ids);
         helper.cerrar();
 
+
         if(listaRegistro.size() > 0){
 
             adapter= new RegistroAdapter(this, listaRegistro);
@@ -126,4 +137,6 @@ public class RegistrarActividadActivity extends AppCompatActivity {
             Toast.makeText(this, "No hay registros en la base" + ids, Toast.LENGTH_SHORT).show();
         }
     }
+
+
 }

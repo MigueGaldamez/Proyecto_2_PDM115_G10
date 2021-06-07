@@ -1,6 +1,8 @@
 package com.example.habitos_saludables_g10;
 
-public class Registro {
+import java.io.Serializable;
+
+public class Registro implements Serializable {
 
     private String idDia,idHabito,idUsuario,fecha,comentario;
 

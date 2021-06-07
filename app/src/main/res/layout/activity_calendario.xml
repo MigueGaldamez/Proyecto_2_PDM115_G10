@@ -6,27 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".CalendarioActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+
+    <org.naishadhparmar.zcustomcalendar.CustomCalendar
+        android:id="@+id/custom_calendar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mostrar Calendario"
-        android:textAllCaps="false"
-        android:onClick="abrirCalendario"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/informacion"
+        android:layout_width="405dp"
+        android:layout_height="54dp"
+        android:autoText="true"
+        android:background="#70AF25"
+        android:text="Dias en los que ha registrado eventos a su habito"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/custom_calendar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"></Button>
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

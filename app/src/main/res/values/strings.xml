@@ -60,7 +60,8 @@
     <string name="txtLatitud">Latitud </string>
     <string name="txtLongitud">Longitud </string>
     <string name="txtDireccion">Direccion </string>
-    <string name="btnObtenerDatos">Obtener Datos Posicion </string>
+    <string name="btnObtenerDatos">Mas detalles </string>
     <string name="AbrirCalendario">Abrir Calendario </string>
+    <string name="gps">Ver mi Ubicacion </string>
 
 </resources>
