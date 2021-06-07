@@ -8,11 +8,4 @@
         android:icon="@drawable/audio"
         app:showAsAction="always|collapseActionView"
         />
-    <item
-        android:id="@+id/action_podometro"
-        android:title="Search"
-        android:icon="@drawable/podometro"
-        app:showAsAction="always|collapseActionView"
-        />
-
 </menu>

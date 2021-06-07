@@ -1,0 +1,18 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_contador_pasos"
+        android:title="Search"
+        android:icon="@drawable/contador_pasos"
+        app:showAsAction="always|collapseActionView"
+        />
+
+    <item
+        android:id="@+id/action_objetivo"
+        android:title="Search"
+        android:icon="@drawable/objetivo_pasos"
+        app:showAsAction="always|collapseActionView"
+        />
+
+</menu>
