@@ -6,14 +6,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
-
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
 
@@ -28,10 +22,8 @@
         android:theme="@style/Theme.Habitos_Saludables_G10">
         <activity android:name=".RegistrarActividadActivity"></activity>
         <activity android:name=".AudioActivity" />
-        <activity android:name=".AudioActivity"></activity>
         <activity android:name=".GPSActivity"></activity>
         <activity android:name=".CalendarioActivity"></activity>
-        <activity android:name=".RegistrarActividadActivity"></activity>
         <activity android:name=".videoActivity" />
         <activity android:name=".HabitoInsertarActivity" />
         <activity android:name=".ui.Activity_Main" />

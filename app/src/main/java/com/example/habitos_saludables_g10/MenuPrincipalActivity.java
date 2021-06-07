@@ -181,19 +181,6 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
         gps = findViewById(R.id.gpsVer);
      //   FirebaseMessaging.getInstance().subscribeToTopic("Notificacion1");
 
-        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Habito habito = (Habito)parent.getAdapter().getItem(position);
-                String idHabito = habito.getIdHabito();
-                Intent intent =new Intent(MenuPrincipalActivity.this,RegistrarActividadActivity.class);
-                intent.putExtra("idHabito",idHabito);
-                startActivity(intent);
-
-
-            }
-        });
-
         audios.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
