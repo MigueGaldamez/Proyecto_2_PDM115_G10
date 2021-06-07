@@ -50,6 +50,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import com.google.firebase.messaging.FirebaseMessaging;
+//import com.google.firebase.messaging.FirebaseMessaging;
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.colors.Color;
@@ -117,7 +118,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
     private AppBarConfiguration mAppBarConfiguration;
     private ImageView imagen_perfil;
     private TextView nombre,id,email;
-    private Button salirbtn,exportar,exportarPDF,videos,audios;
+    private Button salirbtn,exportar,exportarPDF,videos,audios, gps;
     private GoogleApiClient googleApiClient;
     private GoogleSignInOptions gso;
     private String idsesion;
@@ -174,7 +175,22 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
                 intent.putExtra("idHabito",idHabito);
                 startActivity(intent);
 
-                
+
+            }
+        });
+        gps = findViewById(R.id.gpsVer);
+     //   FirebaseMessaging.getInstance().subscribeToTopic("Notificacion1");
+
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Habito habito = (Habito)parent.getAdapter().getItem(position);
+                String idHabito = habito.getIdHabito();
+                Intent intent =new Intent(MenuPrincipalActivity.this,RegistrarActividadActivity.class);
+                intent.putExtra("idHabito",idHabito);
+                startActivity(intent);
+
+
             }
         });
 
@@ -182,6 +198,13 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MenuPrincipalActivity.this,AudioActivity.class);
+                startActivity(intent);
+            }
+        });
+        gps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MenuPrincipalActivity.this,GPSActivity.class);
                 startActivity(intent);
             }
         });
@@ -493,6 +516,7 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
 
             listView.setAdapter(adapter);
 
+
         }
         else{
             Toast.makeText(this, "No hay habitos en la base" + ids, Toast.LENGTH_SHORT).show();
@@ -667,6 +691,10 @@ public class MenuPrincipalActivity extends AudioControl implements GoogleApiClie
             case "listado de habitos":
                 adapter= new HabitoAdapter(this, listaHabitos);
                 lista.setAdapter(adapter);
+                break;
+            case "donde estoy":
+                Intent intent=new Intent(MenuPrincipalActivity.this,GPSActivity.class);
+                startActivity(intent);
                 break;
             case "cerrar app":
                 //finish(); System.exit(0);

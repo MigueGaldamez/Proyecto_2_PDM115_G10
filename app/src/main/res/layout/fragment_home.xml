@@ -33,11 +33,9 @@
         android:layout_marginTop="10dp" />
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="65dp"
         android:layout_margin="30dp"
         android:orientation="vertical">
 
@@ -46,26 +44,26 @@
             android:layout_width="fill_parent"
             android:layout_height="0px"
             android:layout_weight="0.5"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <Button
-                android:layout_marginRight="5dp"
-                android:text="@string/Exportar"
-                android:layout_width="0px"
-                android:layout_height="fill_parent"
-                android:layout_weight="0.5"
                 android:id="@+id/excel"
-                android:backgroundTint="@color/boton_excel"/>
+                android:layout_width="0px"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:backgroundTint="@color/boton_excel"
+                android:text="@string/Exportar" />
 
 
             <Button
-                android:layout_marginLeft="5dp"
-                android:text="@string/ExportarPdf"
+                android:id="@+id/pdf"
                 android:layout_width="0px"
                 android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
                 android:layout_weight="0.5"
-                android:id="@+id/pdf"
-                android:backgroundTint="@color/boton_pdf"/>
+                android:backgroundTint="@color/boton_pdf"
+                android:text="@string/ExportarPdf" />
 
         </LinearLayout>
 
@@ -81,6 +79,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/audiosVer"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:text="@string/gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gpsVer"
         android:layout_marginTop="10dp" />
 
 

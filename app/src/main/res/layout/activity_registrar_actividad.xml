@@ -71,4 +71,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp" />
 
+    <Button
+        android:text="@string/AbrirCalendario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendarioVer"
+        android:layout_marginTop="10dp" />
+
 </TableLayout>
